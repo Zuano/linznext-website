@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzungsbedingungen — LinzNext</title>
+    <meta name="description" content="Nutzungsbedingungen für die LinzNext App.">
+    <meta name="theme-color" content="#EB6B00">
+    <style>
+        :root {
+            --orange: #EB6B00;
+            --orange-light: #FF8A2E;
+            --blue: #2953A3;
+            --blue-dark: #1E3D7A;
+            --gray: #5A5E61;
+            --light: #F3F3F3;
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-brand .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+
+        .lang-toggle {
+            background: var(--light);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 120px auto 80px;
+            padding: 0 24px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            color: var(--dark);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .last-updated {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 60px 24px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--orange); }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links a:not(.lang-toggle) { display: none; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.2rem; }
+            .content { margin-top: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a href="./" class="nav-brand">
+            <div class="icon">L</div>
+            LinzNext
+        </a>
+        <div class="nav-links">
+            <a href="./#features">Features</a>
+            <a href="./#pricing">Premium</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="en/terms.html" class="lang-toggle">EN</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="content">
+    <h1>Nutzungsbedingungen</h1>
+    <p class="last-updated">Gültig ab: 5. April 2026</p>
+
+    <h2>1. Akzeptanz der Bedingungen</h2>
+    <p>Durch die Installation und Nutzung der LinzNext App („die App") stimmst du diesen Nutzungsbedingungen zu. Wenn du diesen Bedingungen nicht zustimmst, darfst du die App nicht verwenden.</p>
+
+    <h2>2. Beschreibung des Dienstes</h2>
+    <p>LinzNext ist eine Anwendung, die Echtzeit-Abfahrtsinformationen für öffentliche Verkehrsmittel in Linz, Österreich anzeigt. Die App ist für iOS, watchOS und macOS verfügbar und nutzt den Standort des Benutzers, um nahegelegene Haltestellen zu identifizieren.</p>
+    <p>Die App funktioniert in zwei Modi:</p>
+    <ul>
+        <li><strong>Kostenlos:</strong> Zeigt die nächstgelegene Haltestelle an</li>
+        <li><strong>Premium:</strong> Zeigt alle Haltestellen in der Nähe (im Umkreis von etwa 500 Metern)</li>
+    </ul>
+
+    <h2>3. Abonnements und Zahlungen</h2>
+    <p>LinzNext bietet optionale In-App-Abonnements über die Apple App Store-Zahlungsabwicklung an:</p>
+    <ul>
+        <li><strong>Monatliches Abonnement:</strong> €1,99 pro Monat</li>
+        <li><strong>Jahresabonnement:</strong> €8,99 pro Jahr</li>
+        <li><strong>Lebenslang:</strong> €14,99 einmalig</li>
+    </ul>
+    <p>Alle Abonnements werden über Apples In-App-Kaufsystem verwaltet. Apple ist die Zahlungsabwicklung und Abonnementverwaltung unterworfen. Die Bedingungen der App Store werden ebenfalls auf diese Transaktionen angewendet. Durch den Erwerb eines Abonnements ermächtigst du Apple, das entsprechende Entgelt von deinem Apple-Konto abzubuchen.</p>
+
+    <h2>4. Geistiges Eigentum</h2>
+    <p>LinzNext und alle damit verbundenen Inhalte (Logos, Design, Code, Text) sind Eigentum von LinguaFlow e.U. oder deren Lizenzgebern. Du erhältst eine begrenzte, nicht-exklusive, nicht-übertragbare Lizenz zur Nutzung der App für den persönlichen, nicht-kommerziellen Gebrauch. Du darfst die App nicht decompilieren, reverse engineern, reproduzieren oder modifizieren.</p>
+
+    <h2>5. Haftungsbeschränkung</h2>
+    <p>DIE APP WIRD „WIE VORHANDEN" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLICH NOCH STILLSCHWEIGEND, EINSCHLIESSLICH ABER NICHT BESCHRÄNKT AUF HANDELSÜBLICHKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK ODER NICHTVERLETZUNG VON RECHTEN.</p>
+    <p>LinguaFlow e.U. haftet nicht für:</p>
+    <ul>
+        <li>Unrichtige oder fehlende Abfahrtsdaten</li>
+        <li>Unterbrechungen des Dienstes oder Ausfallzeiten</li>
+        <li>Verluste oder Beschädigungen, die sich aus der Nutzung oder Unmöglichkeit der Nutzung der App ergeben</li>
+        <li>Datenverlust oder Datenschutz-Sicherheitsverletzungen</li>
+    </ul>
+
+    <h2>6. Datenquellenattribution</h2>
+    <p>Die in LinzNext angezeigten Echtzeit-Abfahrtsdaten stammen von der LINZ AG LINIEN über die öffentliche EFA-API (elektronische Fahrplanauskunft). Die Daten werden ohne jegliche Änderung oder Curation übermittelt. LinguaFlow e.U. ist nicht verantwortlich für die Genauigkeit, Verfügbarkeit oder Aktualität dieser Daten.</p>
+    <p>Die Datenquelle ist: <a href="https://www.linzag.at" target="_blank" rel="noopener">LINZ AG LINIEN</a></p>
+
+    <h2>7. Beendigung</h2>
+    <p>Du kannst die Nutzung der App jederzeit beenden, indem du sie deinstallierst. LinguaFlow e.U. kann deinen Zugriff auf die App jederzeit und ohne Angabe von Gründen beenden. Im Falle der Beendigung eines bezahlten Abonnements gelten Apples Richtlinien für Rückerstattungen.</p>
+
+    <h2>8. Änderungen der Bedingungen</h2>
+    <p>LinguaFlow e.U. behält sich das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Die aktuelle Version wird auf dieser Seite veröffentlicht. Die fortgesetzte Nutzung der App nach Änderungen bedeutet deine Zustimmung zu den neuen Bedingungen.</p>
+
+    <h2>9. Geltungsbereich und anwendbares Recht</h2>
+    <p>Diese Nutzungsbedingungen unterliegen den Gesetzen der Republik Österreich. Alle Streitigkeiten werden ausschließlich vor den Gerichten in Linz, Österreich entschieden.</p>
+
+    <h2>10. Kontakt</h2>
+    <p>Bei Fragen zu diesen Nutzungsbedingungen kontaktiere uns unter: <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a></p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">LinzNext</div>
+            <p>Echtzeit-Abfahrten für Linz.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+                <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a>
+            </div>
+            <div class="footer-col">
+                <h4>Sprache</h4>
+                <a href="en/">English</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 LinguaFlow e.U. Alle Rechte vorbehalten. Datenquelle: <a href="https://www.linzag.at" target="_blank" rel="noopener">LINZ AG LINIEN</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

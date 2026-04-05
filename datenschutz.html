@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung — LinzNext</title>
+    <meta name="description" content="Datenschutzerklärung für die LinzNext App. Erfahre wie wir deine Daten schützen.">
+    <meta name="theme-color" content="#EB6B00">
+    <link rel="alternate" hreflang="en" href="privacy.html">
+    <link rel="alternate" hreflang="de" href="./">
+    <style>
+        :root {
+            --orange: #EB6B00;
+            --orange-light: #FF8A2E;
+            --blue: #2953A3;
+            --blue-dark: #1E3D7A;
+            --gray: #5A5E61;
+            --light: #F3F3F3;
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-brand .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+
+        .lang-toggle {
+            background: var(--light);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        /* Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 140px 24px 60px;
+        }
+
+        .page-header {
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .page-header .subtitle {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--dark);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .section p {
+            color: var(--gray);
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .section ul {
+            margin: 14px 0 14px 24px;
+            color: var(--gray);
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .section a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: rgba(235, 107, 0, 0.08);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            margin: 20px 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+
+        .contact-box {
+            background: var(--light);
+            padding: 24px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-box strong {
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 60px 24px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--orange); }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 100px 20px 60px; }
+            .page-header h1 { font-size: 1.8rem; }
+            .section h2 { font-size: 1.2rem; }
+            .nav-links a:not(.lang-toggle) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a href="./" class="nav-brand">
+            <div class="icon">L</div>
+            LinzNext
+        </a>
+        <div class="nav-links">
+            <a href="./#features">Features</a>
+            <a href="./#pricing">Premium</a>
+            <a href="privacy.html" class="lang-toggle">EN</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container">
+    <div class="page-header">
+        <h1>Datenschutzerklärung</h1>
+        <p class="subtitle">LinzNext — Gültig ab 5. April 2026</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Überblick</h2>
+        <p>LinzNext ist eine Echtzeit-App für Abfahrten öffentlicher Verkehrsmittel in Linz, Österreich. Dein Datenschutz ist uns wichtig. Diese Erklärung beschreibt, welche Daten wir (nicht) sammeln und wie wir deine Privatsphäre schützen.</p>
+        <div class="highlight">
+            <strong>Die gute Nachricht:</strong> LinzNext sammelt praktisch keine persönlichen Daten. Dein Standort wird nur lokal auf deinem Gerät verwendet und nicht gespeichert oder übertragen.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Wer wir sind</h2>
+        <p><strong>Anbieter:</strong> LinguaFlow e.U.</p>
+        <p><strong>Vertreter:</strong> Christian Nouza</p>
+        <p><strong>Adresse:</strong><br>
+        Linzer Straße 17<br>
+        4100 Ottensheim<br>
+        Österreich</p>
+        <p><strong>E-Mail:</strong> hello@linguaflow.app</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Welche Daten wir sammeln und warum</h2>
+
+        <h3>3.1 Standortdaten</h3>
+        <p>LinzNext verwendet deinen GPS-Standort, um Haltestellen in der Nähe zu finden und Abfahrtsinformationen anzuzeigen.</p>
+        <ul>
+            <li><strong>Verarbeitung:</strong> Nur lokal auf deinem Gerät</li>
+            <li><strong>Speicherung:</strong> Nicht gespeichert. Die Daten werden nur für die aktuelle Session verwendet</li>
+            <li><strong>Übertragung:</strong> Dein exakter Standort wird nicht an uns oder an externe Server übertragen</li>
+            <li><strong>API-Anfragen:</strong> Nur allgemeine Anfragen an die Linz AG EFA API, ohne Standortidentifizierer</li>
+        </ul>
+
+        <h3>3.2 In-App-Käufe und Abonnements</h3>
+        <p>LinzNext nutzt RevenueCat zur Verwaltung von Premium-Abos und Einzelkäufen.</p>
+        <ul>
+            <li><strong>Verarbeitung:</strong> RevenueCat verarbeitet Kaufdaten anonymisiert</li>
+            <li><strong>Daten:</strong> RevenueCat erhält Informationen wie Kaufhistorie und Abo-Status</li>
+            <li><strong>Deine Kontrolle:</strong> Du kannst Abos über dein App-Store-Konto verwalten</li>
+            <li><strong>Datenschutz:</strong> Siehe RevenueCat-Datenschutzrichtlinie: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+        </ul>
+
+        <h3>3.3 Was wir NICHT sammeln</h3>
+        <ul>
+            <li>Keine Benutzerkonten oder Registrierung erforderlich</li>
+            <li>Keine Analytics oder Tracking (z.B. Google Analytics, Firebase)</li>
+            <li>Keine Werbung oder Werbe-IDs</li>
+            <li>Keine App-Nutzungsstatistiken</li>
+            <li>Keine persönlich identifizierbaren Informationen (Namen, E-Mail, etc.)</li>
+            <li>Keine Crash-Berichte mit persönlichen Daten</li>
+            <li>Kein Zugriff auf Kontakte, Kalender oder andere private Daten</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Datenquellen</h2>
+
+        <h3>4.1 Linz AG EFA API</h3>
+        <p>LinzNext ruft Echtzeit-Abfahrtsdaten von der öffentlichen Linz AG EFA API ab.</p>
+        <ul>
+            <li><strong>Daten:</strong> Haltestellen, Fahrtinformationen, Echtzeitdaten</li>
+            <li><strong>API-Schlüssel:</strong> Nicht erforderlich (öffentliche API)</li>
+            <li><strong>Deine Daten:</strong> Dein Standort wird der Linz AG API nicht mitgeteilt</li>
+            <li><strong>Linz AG Datenschutz:</strong> <a href="https://www.linzag.at" target="_blank" rel="noopener">linzag.at</a></li>
+        </ul>
+
+        <h3>4.2 RevenueCat</h3>
+        <p>Für Premium-Funktionen und Abos.</p>
+        <p>RevenueCat kann aggregierte Nutzungsdaten sammeln, um Dienste bereitzustellen. Weitere Informationen findest du in ihrer <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Datenspeicherung und Aufbewahrung</h2>
+        <ul>
+            <li><strong>Lokal:</strong> Minimale Einstellungen werden lokal auf deinem Gerät gespeichert (z.B. bevorzugte Haltestellen)</li>
+            <li><strong>Keine Server-Speicherung:</strong> Wir speichern keine Benutzerdaten auf Servern</li>
+            <li><strong>Standortdaten:</strong> Werden nicht gespeichert oder übertragen</li>
+            <li><strong>RevenueCat:</strong> Kaufdaten werden gemäß RevenueCat-Richtlinien gespeichert</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Deine Rechte</h2>
+        <p>Als Nutzer in Österreich/der EU hast du unter der DSGVO folgende Rechte:</p>
+        <ul>
+            <li><strong>Recht auf Auskunft:</strong> Du kannst erfragen, welche Daten wir über dich haben</li>
+            <li><strong>Recht auf Löschung:</strong> Du kannst die Löschung deiner Daten verlangen</li>
+            <li><strong>Recht auf Datenübertragbarkeit:</strong> Du kannst deine Daten in maschinenlesbarem Format erhalten</li>
+            <li><strong>Recht auf Widerspruch:</strong> Du kannst der Verarbeitung widersprechen</li>
+        </ul>
+        <p>Da wir praktisch keine personenbezogenen Daten sammeln, sind diese Rechte in den meisten Fällen schnell erfüllt. Kontaktiere uns unter hello@linguaflow.app für Anfragen.</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Datensicherheit</h2>
+        <ul>
+            <li>Die App kommuniziert nur mit HTTPS-geschützten APIs</li>
+            <li>Keine Speicherung sensibler Daten auf Geräten</li>
+            <li>App-Updates adressieren Sicherheitsprobleme zeitnah</li>
+            <li>Wir folgen Best Practices für sichere Softwareentwicklung</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Datentransfers</h2>
+        <p><strong>Geografischer Standort:</strong> Die App kann von überall verwendet werden, aber:</p>
+        <ul>
+            <li>Dein Standort wird nicht international übertragen</li>
+            <li>API-Anfragen gehen an Linz AG Server (Österreich)</li>
+            <li>RevenueCat kann Daten in den USA verarbeiten</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Kinderschutz</h2>
+        <p>LinzNext ist nicht für Kinder unter 13 Jahren bestimmt. Wir sammeln keine Daten von Kindern. Falls du davon erfährst, dass ein Kind unter 13 Jahren die App nutzt, kontaktiere uns bitte unter hello@linguaflow.app.</p>
+    </div>
+
+    <div class="section">
+        <h2>10. Cookies und Tracking</h2>
+        <p>LinzNext nutzt keine Cookies, Pixel, Web Beacons oder ähnliche Tracking-Technologien. Die App enthält keine Analytics-Bibliotheken.</p>
+    </div>
+
+    <div class="section">
+        <h2>11. Änderungen dieser Erklärung</h2>
+        <p>Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Die Aktualisierungen werden hier veröffentlicht mit neuem Datum. Wesentliche Änderungen werden dir mitgeteilt.</p>
+        <p><strong>Letzte Aktualisierung:</strong> 5. April 2026</p>
+    </div>
+
+    <div class="section">
+        <h2>12. Kontakt und Beschwerden</h2>
+        <p>Fragen oder Bedenken zur Datenschutzerklärung?</p>
+        <div class="contact-box">
+            <p><strong>E-Mail:</strong> <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a></p>
+            <p><strong>Unternehmen:</strong> LinguaFlow e.U.</p>
+            <p><strong>Vertreter:</strong> Christian Nouza</p>
+        </div>
+        <p style="margin-top: 20px;">Du hast auch das Recht, eine Beschwerde bei der österreichischen Datenschutzbehörde (Datenschutzbehörde) einzureichen.</p>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">LinzNext</div>
+            <p>Echtzeit-Abfahrten für Linz.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+                <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a>
+            </div>
+            <div class="footer-col">
+                <h4>Sprache</h4>
+                <a href="privacy.html">English</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 LinguaFlow e.U. Alle Rechte vorbehalten. Datenquelle: <a href="https://www.linzag.at" target="_blank" rel="noopener">LINZ AG LINIEN</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

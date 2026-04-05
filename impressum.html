@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — LinzNext</title>
+    <meta name="description" content="Impressum und Kontaktinformationen für die LinzNext App.">
+    <meta name="theme-color" content="#EB6B00">
+    <style>
+        :root {
+            --orange: #EB6B00;
+            --orange-light: #FF8A2E;
+            --blue: #2953A3;
+            --blue-dark: #1E3D7A;
+            --gray: #5A5E61;
+            --light: #F3F3F3;
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-brand .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+
+        .lang-toggle {
+            background: var(--light);
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 120px auto 80px;
+            padding: 0 24px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 32px;
+            color: var(--dark);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .contact-info {
+            background: var(--light);
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 60px 24px 30px;
+            margin-top: 80px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--orange); }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links a:not(.lang-toggle) { display: none; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.2rem; }
+            .content { margin-top: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-inner">
+        <a href="./" class="nav-brand">
+            <div class="icon">L</div>
+            LinzNext
+        </a>
+        <div class="nav-links">
+            <a href="./#features">Features</a>
+            <a href="./#pricing">Premium</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="en/impressum.html" class="lang-toggle">EN</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="content">
+    <h1>Impressum</h1>
+
+    <h2>Medieninhaber (Herausgeber)</h2>
+    <div class="contact-info">
+        <p><strong>LinguaFlow e.U.</strong></p>
+        <p>Einzelunternehmen</p>
+        <p><strong>Inhaber:</strong> Christian Nouza</p>
+        <p><strong>Firmenbuchnummer:</strong> FN 651220b</p>
+        <p><strong>UID-Nummer:</strong> ATU81988814</p>
+    </div>
+
+    <h2>Unternehmensgegenstand</h2>
+    <p>App-Entwicklung und mobile Anwendungen, insbesondere die Entwicklung und der Vertrieb der LinzNext App für iOS, watchOS und macOS.</p>
+
+    <h2>Kontaktinformationen</h2>
+    <div class="contact-info">
+        <p><strong>Adresse:</strong><br>
+        Linzer Straße 17<br>
+        4100 Ottensheim<br>
+        Österreich</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a></p>
+    </div>
+
+    <h2>Rechtliche Hinweise</h2>
+    <p>Dieses Impressum wurde gemäß den Anforderungen des österreichischen Gesetzes, insbesondere des E-Commerce-Gesetzes (ECG) und des Mediengesetzes (MedienG), erstellt.</p>
+
+    <p>LinzNext ist eine mobile Anwendung, die in Österreich von LinguaFlow e.U. als Einzelunternehmen entwickelt und vertrieben wird.</p>
+
+    <h2>Datenquelle</h2>
+    <p>Die in LinzNext angezeigten Echtzeit-Abfahrtsdaten stammen von:</p>
+    <p><strong>LINZ AG LINIEN</strong><br>
+    <a href="https://www.linzag.at" target="_blank" rel="noopener">https://www.linzag.at</a></p>
+
+    <p>Die Daten werden über die öffentliche EFA-API (Elektronische Fahrplanauskunft) bereitgestellt und sind Eigentum der LINZ AG LINIEN. LinguaFlow e.U. nutzt diese Daten mit Genehmigung.</p>
+
+    <h2>Haftungsausschluss</h2>
+    <p>LinguaFlow e.U. übernimmt keine Haftung für:</p>
+    <ul>
+        <li>Die Genauigkeit oder Aktualität der bereitgestellten Informationen</li>
+        <li>Fehler oder Auslassungen in den Daten</li>
+        <li>Unterbrechungen oder Ausfallzeiten des Dienstes</li>
+        <li>Schäden, die sich aus der Nutzung der App ergeben</li>
+    </ul>
+
+    <h2>Urheberrecht</h2>
+    <p>Die Inhalte dieser App (Logos, Design, Texte, Code) sind urheberrechtlich geschützt. Alle Rechte vorbehalten. Die Vervielfältigung, Bearbeitung oder Verbreitung von Inhalten ist ohne vorherige schriftliche Zustimmung nicht gestattet.</p>
+
+    <h2>Geltung</h2>
+    <p>Das vorliegende Impressum ist gültig ab 5. April 2026.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">LinzNext</div>
+            <p>Echtzeit-Abfahrten für Linz.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+                <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <a href="mailto:hello@linguaflow.app">hello@linguaflow.app</a>
+            </div>
+            <div class="footer-col">
+                <h4>Sprache</h4>
+                <a href="en/">English</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 LinguaFlow e.U. Alle Rechte vorbehalten. Datenquelle: <a href="https://www.linzag.at" target="_blank" rel="noopener">LINZ AG LINIEN</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
