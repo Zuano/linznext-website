@@ -1,0 +1,148 @@
+{
+  "_hinweis": "Einzige Quelle für alle Neuerungen von LinzNext. Daraus entstehen: das Neuigkeiten-Fenster in der iPhone- und Android-App, die Store-Texte (App Store + Google Play) und die Versionsseite der Website. Neueste Version zuerst. Pro Version eintragen, BEVOR der Release eingereicht wird — die Release-Skripte brechen sonst ab. Anleitung: NEUIGKEITEN.md.",
+  "versionen": [
+    {
+      "version": "2.3.0",
+      "datum": "2026-09-18",
+      "popup": true,
+      "punkte": [
+        {
+          "de": "Feste Reihenfolge: Bei den Straßenbahnen 1 und 2 steht die Richtung Universität immer oben und springt nicht mehr hin und her.",
+          "en": "Fixed order: for trams 1 and 2 the direction Universität is always on top and no longer jumps back and forth."
+        },
+        {
+          "de": "Favoriten bleiben sichtbar – auch ohne aktuelle Abfahrten oder bei schlechtem Netz.",
+          "en": "Favourites stay visible – even without current departures or with a weak connection."
+        },
+        {
+          "de": "Ohne Internet siehst du eine klare Meldung, und die letzten Abfahrten bleiben stehen.",
+          "en": "Without internet you get a clear message, and the last departures stay on screen."
+        },
+        {
+          "de": "Support-Kontakt direkt in den Einstellungen und auf der Kaufseite.",
+          "en": "Support contact right in the settings and on the purchase screen."
+        },
+        {
+          "de": "Apple Watch: Abfahrtszeiten passen auf jeder Uhrgröße in eine Zeile.",
+          "en": "Apple Watch: departure times fit on one line on every watch size.",
+          "plattformen": ["watch"]
+        },
+        {
+          "de": "Große Schrift und TalkBack verbessert.",
+          "en": "Better large text and TalkBack support.",
+          "plattformen": ["android"]
+        }
+      ]
+    },
+    {
+      "version": "2.2.1",
+      "datum": "2026-09-16",
+      "popup": true,
+      "punkte": [
+        {
+          "de": "Favoriten kannst du jetzt auch während der 7 Gratis-Tage speichern.",
+          "en": "You can now save favourites during the 7 free days too."
+        },
+        {
+          "de": "Alle gespeicherten Haltestellen bleiben sichtbar – auch wenn dort dieselben Linien fahren.",
+          "en": "All saved stops stay visible – even when the same lines run there."
+        },
+        {
+          "de": "Bis zu 20 Favoriten möglich.",
+          "en": "Up to 20 favourites."
+        }
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "datum": "2026-08-22",
+      "popup": true,
+      "punkte": [
+        {
+          "de": "Neu: Favoriten – speichere deine Lieblings-Haltestellen und wechsle oben zwischen „In der Nähe“ und „Favoriten“.",
+          "en": "New: favourites – save your favourite stops and switch between “Nearby” and “Favourites” at the top."
+        },
+        {
+          "de": "Die ersten 7 Tage ist alles frei, danach bleibt LinzNext gratis nutzbar.",
+          "en": "Everything is free for the first 7 days, and LinzNext stays free to use afterwards."
+        },
+        {
+          "de": "Premium ist günstiger: 0,99 € im Monat, 6,99 € im Jahr oder 34,99 € einmalig.",
+          "en": "Premium is cheaper: €0.99 a month, €6.99 a year or €34.99 once."
+        },
+        {
+          "de": "Die Haltestellensuche ist jetzt für alle frei.",
+          "en": "Stop search is now free for everyone."
+        },
+        {
+          "de": "Die Abweichung vom Fahrplan steht direkt unter der Zeit, zu der sie gehört.",
+          "en": "The deviation from the timetable now sits right below the time it belongs to."
+        },
+        {
+          "de": "Widget und Apple Watch zeigen immer alle Haltestellen in der Nähe.",
+          "en": "Widget and Apple Watch always show all nearby stops.",
+          "plattformen": ["apple", "watch"]
+        }
+      ]
+    },
+    {
+      "version": "2.0.2",
+      "datum": "2026-08-01",
+      "popup": false,
+      "punkte": [
+        {
+          "de": "Technische Aktualisierung für die neueste Android-Version.",
+          "en": "Technical update for the latest Android version.",
+          "plattformen": ["android"]
+        }
+      ]
+    },
+    {
+      "version": "2.0.1",
+      "datum": "2026-07-22",
+      "popup": false,
+      "punkte": [
+        {
+          "de": "Apple Watch: VoiceOver liest nur noch Haltestelle und Abfahrtszeiten vor, ohne das Echtzeit-Symbol.",
+          "en": "Apple Watch: VoiceOver now reads only the stop and departure times, without the real-time symbol.",
+          "plattformen": ["watch"]
+        },
+        {
+          "de": "Kaufabwicklung auf den neuesten Stand von Google Play gebracht.",
+          "en": "Purchases updated to the latest Google Play requirements.",
+          "plattformen": ["android"]
+        }
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "datum": "2026-07-17",
+      "popup": true,
+      "punkte": [
+        {
+          "de": "iPhone und Android tragen ab jetzt dieselbe Versionsnummer.",
+          "en": "iPhone and Android now share the same version number."
+        },
+        {
+          "de": "Apple Watch: Aktualisiert wird nur noch beim echten Öffnen der App, nicht mehr beim Arm-Heben oder Scrollen.",
+          "en": "Apple Watch: refreshes only when you really open the app, no longer when you raise your wrist or scroll.",
+          "plattformen": ["watch"]
+        },
+        {
+          "de": "Der Bewertungs-Dialog friert beim Start nicht mehr ein.",
+          "en": "The rating dialog no longer freezes at launch.",
+          "plattformen": ["apple"]
+        },
+        {
+          "de": "TalkBack liest die Abfahrten verständlich vor, und der Aktualisieren-Knopf ist klar beschriftet.",
+          "en": "TalkBack reads departures clearly, and the refresh button is clearly labelled.",
+          "plattformen": ["android"]
+        },
+        {
+          "de": "Anonyme Nutzungsstatistik ohne Tracking, damit wir sehen, was wir verbessern sollen.",
+          "en": "Anonymous usage statistics without tracking, so we know what to improve."
+        }
+      ]
+    }
+  ]
+}
