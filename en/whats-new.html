@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's new — LinzNext</title>
+    <meta name="description" content="Everything new in LinzNext: what changed in each version for iPhone, Apple Watch and Android.">
+    <meta name="theme-color" content="#0a7d3c">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="alternate" hreflang="de" href="../neuigkeiten.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Same design as index.html ("1b — Clean & seriös")
+           Gleiches Design wie index.html („1b — Clean & seriös") */
+        :root {
+            --green: #0a7d3c;
+            --green-dark: #086331;
+            --green-tint: #EAF4EE;
+            --orange: #EB6B00;
+            --dark: #1a1a1a;
+            --gray: #5A5E61;
+            --gray-light: #9A9A96;
+            --border: #ECECEA;
+            --bg: #FBFBFA;
+            --mono: 'IBM Plex Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { color: var(--green); text-decoration: none; }
+        a:hover { color: var(--green-dark); }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(251,251,250,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .brand img { width: 32px; height: 32px; border-radius: 8px; display: block; }
+
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { font-size: 15px; color: #444; }
+        .nav-links a:hover { color: var(--green); }
+
+        /* Page / Seite */
+        main { max-width: 800px; margin: 0 auto; padding: 64px 24px 72px; }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(32px, 5vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .lead { margin: 0 0 28px; font-size: 17px; color: var(--gray); max-width: 560px; }
+
+        /* Platform filter / Plattform-Filter */
+        .filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+        .filter-chip {
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 7px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        .filter-chip:hover { border-color: var(--green); color: var(--green); }
+        .filter-chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #ffffff; }
+
+        /* Releases / Versionen */
+        .release {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+
+        .release-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .release-version { font-family: var(--mono); font-size: 20px; font-weight: 700; color: var(--green); }
+        .release-date { font-size: 14px; color: var(--gray-light); }
+
+        .release-points { list-style: none; }
+        .release-points li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 15.5px;
+            line-height: 1.55;
+        }
+        .release-points li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 0.6em;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--orange);
+        }
+
+        .platform-tag {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 9px;
+            border-radius: 999px;
+            background: var(--green-tint);
+            color: var(--green);
+            vertical-align: 1px;
+            white-space: nowrap;
+        }
+
+        .release-note { color: var(--gray); font-size: 15px; }
+
+        /* Footer */
+        footer { border-top: 1px solid var(--border); }
+
+        .footer-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner span, .footer-inner a { font-size: 14px; color: var(--gray-light); }
+        .footer-inner a:hover { color: var(--green); }
+        .footer-links-row { display: flex; gap: 24px; flex-wrap: wrap; }
+
+        @media (max-width: 600px) {
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: 14px; }
+            .nav-links a.hide-mobile { display: none; }
+            main { padding-top: 40px; }
+            .release { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-inner">
+        <a href="../" class="brand">
+            <img src="../assets/favicon.svg" alt="ÖffiNext Logo">
+            ÖffiNext
+        </a>
+        <nav class="nav-links">
+            <a href="./">Home</a>
+            <a href="../neuigkeiten.html">DE</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h1>What's new</h1>
+    <p class="lead">What changed in LinzNext — version by version, for iPhone, Apple Watch and Android.</p>
+
+    <!-- Filled from neuigkeiten.json — the same file the apps and store texts use.
+         Wird aus neuigkeiten.json befüllt — derselben Datei wie App und Store-Texte. -->
+    <div class="filter" id="platform-filter" role="group" aria-label="Choose platform"></div>
+    <div id="releases" data-lang="en" data-src="../neuigkeiten.json" aria-live="polite">
+        <noscript><p class="release-note">Please enable JavaScript to see the news. The raw data is in <a href="../neuigkeiten.json">neuigkeiten.json</a>.</p></noscript>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <span>© 2026 ÖffiNext · a project by LinguaFlow e.U.</span>
+        <span class="footer-links-row">
+            <a href="whats-new.html">What's new</a>
+            <a href="../privacy.html">Privacy</a>
+            <a href="../terms.html">Terms</a>
+            <a href="../impressum.html">Impressum</a>
+        </span>
+    </div>
+</footer>
+
+<script src="../assets/neuigkeiten.js"></script>
+
+<!-- Cloudflare Web Analytics / Besucher-Statistik -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4366375ac5a7459b813f233f5bfe702f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

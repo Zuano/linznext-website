@@ -256,6 +256,58 @@
         .feature-card h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
         .feature-card p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--gray); }
 
+        /* Widgets / Sperrbildschirm-Widget */
+        .widget-layout { display: flex; gap: 56px; align-items: flex-start; flex-wrap: wrap; }
+        .widget-steps { flex: 1; min-width: 300px; }
+        .widget-steps h3 { margin: 28px 0 10px; font-size: 18px; font-weight: 700; }
+        .widget-steps h3:first-child { margin-top: 0; }
+        .widget-steps ol { margin: 0 0 0 22px; color: var(--gray); font-size: 15.5px; line-height: 1.6; }
+        .widget-steps li { margin-bottom: 6px; padding-left: 4px; }
+        .widget-steps li strong { color: var(--dark); font-weight: 600; }
+        .widget-steps .hint { margin: 10px 0 0; font-size: 14px; color: var(--gray-light); }
+
+        .lock-phone { width: 300px; flex-shrink: 0; margin: 0 auto; }
+        .lock-frame { background: #101010; border-radius: 46px; padding: 12px; box-shadow: 0 24px 60px rgba(0,0,0,0.18); }
+        .lock-screen {
+            position: relative; height: 560px; border-radius: 36px; overflow: hidden;
+            background: linear-gradient(160deg, #123E26 0%, #0a7d3c 55%, #EB6B00 130%);
+            color: #fff; text-align: center; padding-top: 58px;
+        }
+        .lock-island { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 96px; height: 28px; background: #101010; border-radius: 999px; }
+        .lock-date { font-size: 15px; font-weight: 600; opacity: 0.9; }
+        .lock-time { font-size: 76px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 14px; }
+        .lock-widgets { display: flex; justify-content: center; gap: 12px; }
+        .lock-circle {
+            width: 58px; height: 58px; border-radius: 50%;
+            background: rgba(255,255,255,0.22); backdrop-filter: blur(6px);
+            display: flex; align-items: center; justify-content: center;
+            outline: 3px solid rgba(255,255,255,0.9); outline-offset: 3px;
+            animation: tapPulse 2.4s ease-in-out infinite;
+        }
+        .lock-circle svg { width: 28px; height: 28px; }
+        .lock-rect {
+            height: 58px; border-radius: 16px; padding: 0 14px;
+            background: rgba(255,255,255,0.22); display: flex; align-items: center; gap: 8px; text-align: left;
+        }
+        .lock-rect svg { width: 24px; height: 24px; }
+        .lock-rect strong { display: block; font-size: 14px; }
+        .lock-rect span { display: block; font-size: 11px; opacity: 0.8; }
+        .lock-label {
+            position: absolute; left: 50%; transform: translateX(-50%); top: 278px;
+            background: #fff; color: var(--dark); font-size: 13px; font-weight: 600;
+            padding: 6px 12px; border-radius: 10px; white-space: nowrap;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+        .lock-label::before {
+            content: ""; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg);
+            width: 12px; height: 12px; background: #fff;
+        }
+        .lock-bottom { position: absolute; bottom: 26px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 34px; }
+        .lock-bottom span { width: 46px; height: 46px; border-radius: 50%; background: rgba(0,0,0,0.25); }
+        .lock-caption { margin-top: 12px; font-size: 13px; color: var(--gray-light); text-align: center; }
+        @keyframes tapPulse { 0%,100% { outline-color: rgba(255,255,255,0.9); } 50% { outline-color: rgba(255,255,255,0.25); } }
+        @media (prefers-reduced-motion: reduce) { .lock-circle { animation: none; } }
+
         /* Cities / Städte */
         .cities { padding-top: 0; }
 
@@ -485,6 +537,55 @@
     </div>
 </section>
 
+<!-- Widgets: lock screen, home screen, Apple Watch / Sperrbildschirm, Homescreen, Apple Watch -->
+<section id="widgets">
+    <h2>Ein Tipp – und LinzNext ist offen</h2>
+    <p class="section-sub">Leg LinzNext auf deinen Sperrbildschirm: iPhone in die Hand, einmal tippen, Abfahrten sehen. Ohne Entsperren-Wischen, ohne App-Suche.</p>
+    <div class="widget-layout">
+        <div class="lock-phone">
+            <div class="lock-frame">
+                <div class="lock-screen" role="img" aria-label="Illustration: iPhone-Sperrbildschirm mit dem runden LinzNext-Widget unter der Uhrzeit">
+                    <div class="lock-island"></div>
+                    <div class="lock-date">Montag, 29. September</div>
+                    <div class="lock-time">7:42</div>
+                    <div class="lock-widgets">
+                        <div class="lock-circle"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 2h8v2h-3v2h2.5A3.5 3.5 0 0 1 19 9.5V16a3 3 0 0 1-2.1 2.86L18.5 21h-2.2l-1.4-2h-5.8l-1.4 2H5.5l1.6-2.14A3 3 0 0 1 5 16V9.5A3.5 3.5 0 0 1 8.5 6H11V4H8V2Zm.5 6A1.5 1.5 0 0 0 7 9.5V12h10V9.5A1.5 1.5 0 0 0 15.5 8h-7ZM8.5 14a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm7 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg></div>
+                        <div class="lock-rect"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 2h8v2h-3v2h2.5A3.5 3.5 0 0 1 19 9.5V16a3 3 0 0 1-2.1 2.86L18.5 21h-2.2l-1.4-2h-5.8l-1.4 2H5.5l1.6-2.14A3 3 0 0 1 5 16V9.5A3.5 3.5 0 0 1 8.5 6H11V4H8V2Zm.5 6A1.5 1.5 0 0 0 7 9.5V12h10V9.5A1.5 1.5 0 0 0 15.5 8h-7ZM8.5 14a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm7 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg><div><strong>LinzNext</strong><span>Abfahrtsmonitor</span></div></div>
+                    </div>
+                    <div class="lock-label">Tippen – LinzNext öffnet sich</div>
+                    <div class="lock-bottom"><span></span><span></span></div>
+                </div>
+            </div>
+            <p class="lock-caption">Illustration · rund oder breit, du hast die Wahl</p>
+        </div>
+        <div class="widget-steps">
+            <h3>Sperrbildschirm (iPhone)</h3>
+            <ol>
+                <li>iPhone mit Face ID entsperren, aber auf dem Sperrbildschirm bleiben – dann den Sperrbildschirm <strong>gedrückt halten</strong>.</li>
+                <li><strong>„Anpassen“</strong> tippen und <strong>„Sperrbildschirm“</strong> wählen.</li>
+                <li>Das Feld <strong>unter der Uhrzeit</strong> antippen.</li>
+                <li><strong>LinzNext</strong> suchen und das runde oder breite Widget antippen.</li>
+                <li>Liste schließen und oben rechts <strong>„Fertig“</strong> tippen.</li>
+            </ol>
+            <p class="hint">Platz ist knapp? Tippe in Schritt 3 auf das Datum über der Uhrzeit – dort passt LinzNext als kleine Zeile hin.</p>
+
+            <h3>Homescreen (iPhone)</h3>
+            <ol>
+                <li>Auf eine freie Stelle des Homescreens <strong>gedrückt halten</strong>.</li>
+                <li><strong>„Bearbeiten“ → „Widget hinzufügen“</strong> tippen (je nach iOS-Version das <strong>+</strong> oben links).</li>
+                <li><strong>LinzNext</strong> wählen, Größe Mittel oder Groß – das Widget zeigt dann gleich die nächsten Abfahrten.</li>
+            </ol>
+
+            <h3>Apple Watch</h3>
+            <ol>
+                <li>Das Zifferblatt <strong>gedrückt halten</strong> und <strong>„Bearbeiten“</strong> tippen.</li>
+                <li>Nach links wischen bis <strong>„Komplikationen“</strong> und einen Platz antippen.</li>
+                <li><strong>LinzNext</strong> wählen und die Digital Crown drücken – ab jetzt öffnet ein Tipp aufs Zifferblatt die App.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
 <!-- Cities / Städte -->
 <section id="staedte" class="cities">
     <h2>Eine App pro Stadt</h2>
@@ -552,6 +653,10 @@
                 <p>Damit du deine Linie immer an derselben Stelle findest. Würde die Liste nach Abfahrtszeit sortieren, würde sie alle paar Sekunden umspringen — und eine Linie, die erst später fährt, rutscht nach unten und wird leicht übersehen. Deshalb gilt: Linien aufsteigend nach Nummer, und bei den Straßenbahnen steht die Richtung Urfahr (Universität, Landgutstraße) immer oben. Die nächsten Abfahrten jeder Linie siehst du direkt daneben.</p>
             </details>
             <details>
+                <summary>Kann ich LinzNext vom Sperrbildschirm aus öffnen?</summary>
+                <p>Ja – mit dem Sperrbildschirm-Widget reicht ein Tipp. Wie du es einrichtest, steht oben unter <a href="#widgets">„Ein Tipp – und LinzNext ist offen“</a>. Auf der Apple Watch geht dasselbe mit der LinzNext-Komplikation.</p>
+            </details>
+            <details>
                 <summary>Warum braucht die App meinen Standort?</summary>
                 <p>Um automatisch die nächstgelegenen Haltestellen zu finden. Du wählst selbst: nur beim Öffnen der App oder im Hintergrund für sofortige Anzeige.</p>
             </details>
@@ -572,6 +677,7 @@
     <div class="footer-inner">
         <span>© 2026 ÖffiNext · ein Projekt von LinguaFlow e.U.</span>
         <span class="footer-links-row">
+            <a href="neuigkeiten.html">Neuigkeiten</a>
             <a href="datenschutz.html">Datenschutz</a>
             <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
             <a href="impressum.html">Impressum</a>
